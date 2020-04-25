@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LP2_trabalho.Enfermeiro" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="LP2_trabalho.FuncionarioMedico" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="2.312" />
+        <Point X="4.75" Y="2.312" />
+        <Point X="4.75" Y="1.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAQEBAAAAAQCA=</HashCode>
+      <FileName>Enfermeiro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP2_trabalho.FuncionarioMedico" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAEAAEAQAAAAEAAAAAAAAAAAAQAAEAAAA=</HashCode>
+      <FileName>FuncionarioMedico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP2_trabalho.Hospital" Collapsed="true">
+    <Position X="2" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAQAAAAIAIAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Hospital.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP2_trabalho.Medico" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="LP2_trabalho.FuncionarioMedico" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="6.5" Y="2.312" />
+        <Point X="6.75" Y="2.312" />
+        <Point X="6.75" Y="1.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CAGAIAAAAAAAAAAACAAAAAAAAAAAAAAAAABAAAEAQCA=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP2_trabalho.Urgencia" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAUgABAAAAAAAABAAAAIAAAEAAA=</HashCode>
+      <FileName>Urgencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LP2_trabalho.Utente" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAGAEAAJCAAAAEgAAAAAAAACAAAIAgAAAAgAkAAAg=</HashCode>
+      <FileName>Utente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
