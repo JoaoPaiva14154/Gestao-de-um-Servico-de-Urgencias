@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LP2_trabalho</name>
+    </assembly>
+    <members>
+        <member name="T:LP2_trabalho.Auxiliar">
+            <summary>
+            Classe que contém funções auxiliares de cópia e organização de arrays 
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Auxiliar.NovArr(LP2_trabalho.Utente[],System.Int32)">
+            <summary>
+            Copia os dados de um array para um novo array com tamanho dos utentes
+            </summary>
+            <param name="ut">Array de utentes</param>
+            <param name="nUtentes">numero de utentes</param>
+            <returns>Array de utente</returns>
+        </member>
+        <member name="M:LP2_trabalho.Auxiliar.NovArr(LP2_trabalho.Utente[],LP2_trabalho.Utente[])">
+            <summary> 
+            Copia os dados de um array para outro array maior  (polimorfismo)
+            </summary>
+            <param name="ut">Array de utentes menor</param>
+            <param name="ut2">Array de utentes maior</param>
+            <returns>array de utente</returns>
+        </member>
+        <member name="M:LP2_trabalho.Auxiliar.NovArr(LP2_trabalho.Medico[],LP2_trabalho.Medico[])">
+            <summary>
+            Copia os dados do array para outro array (medico)
+            </summary>
+            <param name="med">Array Medico menor</param>
+            <param name="med2">Array medico maior</param>
+            <returns>Array de medico</returns>
+        </member>
+        <member name="M:LP2_trabalho.Auxiliar.NovArr(LP2_trabalho.Enfermeiro[],LP2_trabalho.Enfermeiro[])">
+            <summary>
+            Copia dados do array para outro array maior (enfermeiro)
+            </summary>
+            <param name="enf">Array enf menor</param>
+            <param name="enf2">Array enf maior</param>
+            <returns>Array de enfermeiro</returns>
+        </member>
+        <member name="M:LP2_trabalho.Auxiliar.OrgUtentes(LP2_trabalho.Utente[])">
+            <summary>
+            Ordena utentes por prioridade de pulseira
+            </summary>
+            <param name="ut">Array de utentes</param>
+            <returns>Array de utentes</returns>
+        </member>
+        <member name="T:LP2_trabalho.Data">
+            <summary>
+            Classe que contém funções para armazenar os dados em ficheiros e ler dados de ficheiros 
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Data.GuardaEmBin(LP2_trabalho.Utente[],LP2_trabalho.Utente[],LP2_trabalho.Utente[],LP2_trabalho.Medico[],LP2_trabalho.Enfermeiro[])">
+            <summary>
+            Guarda em ficheiro binario os dados de utentes. Os dados são guardados em ficheiros separados
+            </summary>
+            <param name="atendidos">Array de atendidos</param>
+            <param name="totalUtentes">Array dos utentes totais</param>
+            <param name="atendENAtend">Utentes que passaram pela triagem, atendidos ou não</param>
+            <param name="med">Array de medicos</param>
+            <param name="enf">Array de enfermeiros</param>
+            <returns></returns>
+        </member>
+        <member name="M:LP2_trabalho.Data.LeFicheiro">
+            <summary>
+            Le os 5 ficheiros e adiciona-os a 5 arrays diferentes
+            </summary>
+            <returns>item1=Atendidos, item2=listaGeral, item3=posTriagem, item4=Medicos, item5=enfermeiros</returns>
+        </member>
+        <member name="T:LP2_trabalho.Enfermeiro">
+            <summary>
+            Classe que lida com os enfermeiros
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Enfermeiro.#ctor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Construtor de enfermeiro
+            </summary>
+            <param name="n">nome</param>
+            <param name="p">Posicao</param>
+            <param name="esp">especialidade</param>
+            <param name="num">numero de enfermeiro</param>
+        </member>
+        <member name="M:LP2_trabalho.Enfermeiro.#ctor">
+            <summary>
+            Enfermeiro Default
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Enfermeiro.Especialidade">
+            <summary>
+            Especialidade
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Enfermeiro.NumEnfermeiro">
+            <summary>
+            Numero de Enfermeiro
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Enfermeiro.NaUrgencia">
+            <summary>
+            Situaçao urgencia
+            </summary>
+        </member>
+        <member name="T:LP2_trabalho.FuncionarioMedico">
+            <summary>
+            Classe pai das classes Medico e Enfermeiro
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.FuncionarioMedico.#ctor">
+            <summary>
+            Construtor com valores por defeito/omissão (default)
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.FuncionarioMedico.#ctor(System.String,System.String)">
+            <summary>
+            Construtor com dados vindos do exterior
+            </summary>
+            <param name="p">Posicao da Pessoa</param>
+            <param name="n">Nome da Pessoa</param>
+        </member>
+        <member name="P:LP2_trabalho.FuncionarioMedico.Nome">
+            <summary>
+            Manipula o atributo nome
+            (string nome)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.FuncionarioMedico.Posicao">
+            <summary>
+            Manipula o atributo posicao
+            (string posicao)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.FuncionarioMedico.HorarioDeEntrada">
+            <summary>
+            Horario de entrada
+            (datetime)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.FuncionarioMedico.HorarioDeSaida">
+            <summary>
+            Horario de saida
+            (datetime)
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.FuncionarioMedico.Finalize">
+            <summary>
+            Destrutor
+            </summary>
+        </member>
+        <member name="T:LP2_trabalho.Hospital">
+            <summary>
+            Classe que contém funções de gestão e listagem de médicos e enfermeiros
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Hospital.AdicionaMedico(LP2_trabalho.Medico[])">
+            <summary>
+            Cria medico
+            </summary>
+            <param name="med">Array de Medicos</param>
+            <returns>Um medico</returns>
+        </member>
+        <member name="M:LP2_trabalho.Hospital.AdicionaEnfermeiro(LP2_trabalho.Enfermeiro[])">
+            <summary>
+            Cria enfermeiros
+            </summary>
+            <param name="enf">Array de enfermeiros</param>
+            <returns>enfermeiro</returns>
+        </member>
+        <member name="M:LP2_trabalho.Hospital.MostraFuncionarioMedico(LP2_trabalho.Medico[])">
+            <summary>
+            Mostra funcionarios medicos (medicos)
+            </summary>
+            <param name="med">Array de medicos</param>
+        </member>
+        <member name="M:LP2_trabalho.Hospital.MostraFuncionarioMedico(LP2_trabalho.Enfermeiro[])">
+            <summary>
+            Mostra funcionarios medicos (enfermeiros)
+            </summary>
+            <param name="enf">Array de enf</param>
+        </member>
+        <member name="T:LP2_trabalho.Medico">
+            <summary>
+            Classe que lida com os medicos
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Medico.#ctor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Construtor de medico
+            </summary>
+            <param name="n">nome</param>
+            <param name="p">Posicao</param>
+            <param name="esp">especialidade</param>
+            <param name="num">numero de medico</param>
+        </member>
+        <member name="M:LP2_trabalho.Medico.#ctor">
+            <summary>
+            Medico Default
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Medico.Especialidade">
+            <summary>
+            Especialidade
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Medico.NumMedico">
+            <summary>
+            Numero de medico
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Medico.NaUrgencia">
+            <summary>
+            Bool urgencia
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Medico.PassarReceita(LP2_trabalho.Medico,LP2_trabalho.Utente)">
+            <summary>
+            Metodo para passar receitas, serve para enviar todos os medicamentos necessarios
+            </summary>
+            <param name="medico">Medico</param>
+            <param name="utente">Utente</param>
+            <returns></returns>
+        </member>
+        <member name="T:LP2_trabalho.Menu">
+            <summary>
+            Classe que contém o menu inicial
+            </summary>
+        </member>
+        <member name="T:LP2_trabalho.Program">
+            <summary>
+            Classe main
+            </summary>
+        </member>
+        <member name="T:LP2_trabalho.Urgencia">
+            <summary>
+            Classe que contém funções para gerir a urgencia
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Urgencia.AdicionaUtente(LP2_trabalho.Utente[])">
+            <summary>
+            Adiciona utente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LP2_trabalho.Urgencia.DeServicoNaUrgencia(System.String,LP2_trabalho.Medico[])">
+            <summary>
+            Adiciona medico ao servico de urgencia
+            </summary>
+            <param name="posicao">Med ou enf</param>
+            <param name="med">Array de Med</param>
+            <returns></returns>
+        </member>
+        <member name="M:LP2_trabalho.Urgencia.DeServicoNaUrgencia(System.String,LP2_trabalho.Enfermeiro[])">
+            <summary>
+            Adiciona enfermeiro ao servico de urgencia
+            </summary>
+            <param name="posicao">Enf ou Med</param>
+            <param name="enf">Array de enf</param>
+            <returns></returns>
+        </member>
+        <member name="M:LP2_trabalho.Urgencia.Triagem(LP2_trabalho.Utente[])">
+            <summary>
+            Triagem do utente
+            </summary>
+            <param name="utentTria">Array de utentes</param>
+            <returns></returns>
+        </member>
+        <member name="M:LP2_trabalho.Urgencia.UrgenciaGeral(LP2_trabalho.Utente[])">
+            <summary>
+            Funcao para atender utentes
+            </summary>
+            <param name="utentUrg">Utente da urgencia</param>
+            <returns></returns>
+        </member>
+        <member name="M:LP2_trabalho.Urgencia.AindaNaoAtendidos(LP2_trabalho.Utente[])">
+            <summary>
+            Coloca num array os utentes não atendidos
+            </summary>
+            <param name="ut">Array de utentes</param>
+            <returns></returns>
+        </member>
+        <member name="M:LP2_trabalho.Urgencia.MostraUtenteG(LP2_trabalho.Utente[])">
+            <summary>
+            Apresenta na consola os dados do utente
+            </summary>
+            <param name="ut">Array de Utentes</param>
+        </member>
+        <member name="M:LP2_trabalho.Urgencia.MostraUtentePosT(LP2_trabalho.Utente[])">
+            <summary>
+            Mostra utentes nao atendidos (pos triagem) 
+            </summary>
+            <param name="ut">Array utentes</param>
+        </member>
+        <member name="M:LP2_trabalho.Urgencia.MostraUtenteAtend(LP2_trabalho.Utente[])">
+            <summary>
+            Mostra utentes atendidos
+            </summary>
+            <param name="ut">Array de utentes</param>
+        </member>
+        <member name="T:LP2_trabalho.Utente">
+            <summary>
+            Classe que lida com os utentes
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Utente.#ctor">
+            <summary>
+            Construtor com valores por defeito/omissão
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Utente.#ctor(System.String,System.String,System.String,System.DateTime,System.Int32)">
+            <summary>
+            Construtor com dados vindos do exterior
+            </summary>
+            <param name="n">Nome da Pessoa</param>
+            <param name="r">Regiao da Pessoa</param>
+            <param name="s">Sexo da Pessoa</param>
+            <param name="dataNascim">Data nascimento</param>
+            <param name="cc">Numero cartao de utente (unico)</param>
+        </member>
+        <member name="P:LP2_trabalho.Utente.Nome">
+            <summary>
+            Manipula o atributo "nome"
+            (string)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.Atendido">
+            <summary>
+            Manupula o atributo "atendido"
+            (bool)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.Estado">
+            <summary>
+            Manupula o atributo "estado"
+            (string)
+            [Vermelho/amarelo/verde]
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.Regiao">
+            <summary>
+            Manipula o atributo "regiao"
+            (string)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.Sexo">
+            <summary>
+            Manipula o atributo "sexo"
+            (string)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.DataDeNascimento">
+            <summary>
+            Data de nascimento
+            (datetime)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.DataDeEntrada">
+            <summary>
+            Data de entrada
+            (datetime)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.DatadeAtendimento">
+            <summary>
+            Data de Atendimento
+            (datetime)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.Idade">
+            <summary>
+            Idade do utente
+            (int)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.Prioridade">
+            <summary>
+            Prioridade atendimento
+            (int)
+            </summary>
+        </member>
+        <member name="P:LP2_trabalho.Utente.Observacoes">
+            <summary>
+            Observacoes do atendimento
+            (varios)
+            </summary>
+        </member>
+        <member name="M:LP2_trabalho.Utente.Finalize">
+            <summary>
+            Destrutor
+            </summary>
+        </member>
+    </members>
+</doc>
