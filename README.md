@@ -1,2 +1,2 @@
-# 11582_14154_LP2
+# Repositório GitHub 11582 e 14154
 Trabalho Prático LP2 2019/2020
